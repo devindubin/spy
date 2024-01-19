@@ -1,0 +1,110 @@
+Aquarium
+Art gallery
+Bakery
+Bar
+Barber shop
+Beauty salon
+Bookstore
+Botanical garden
+Bowling alley
+Brewery
+Bridge
+Car dealership
+Car wash
+Castle
+Cemetery
+Church
+City square
+Cliff
+Club
+Comedy club
+Community center
+Computer store
+Construction site
+Country club
+Daycare center
+Dentist office
+Dive bar
+Dog park
+Embassy
+Farm
+Fast food restaurant
+Ferry terminal
+Forest
+Fountain
+Furniture store
+Garage
+Garden
+Golf course
+Hardware store
+Hiking trail
+Historical landmark
+Hostel
+Ice cream shop
+Ice skating rink
+Island
+Jazz club
+Jewelry store
+Junkyard
+Karaoke bar
+Lake
+Landfill
+Laundromat
+Lighthouse
+Marina
+Marketplace
+Martial arts dojo
+Monastery
+Mountain
+Movie rental store
+Nature reserve
+Nightclub
+Observatory
+Office building
+Opera house
+Orchard
+Palace
+Pet store
+Pharmacy
+Pier
+Planetarium
+Playground
+Quarry
+Race track
+Radio station
+Ranch
+Record store
+Recycling center
+Religious shrine
+Resort
+Retirement home
+River
+Rock climbing gym
+Rooftop bar
+Ruins
+Sauna
+School
+Science center
+Sculpture park
+Skate park
+Ski resort
+Spa
+Sports complex
+Surf shop
+Swimming pool
+Tattoo parlor
+Tea house
+Theater
+Theme hotel
+Toy store
+Train depot
+University campus
+Veterinary clinic
+Vineyard
+Volcano
+Water park
+Waterfall
+Wildlife sanctuary
+Windmill
+Winery
+Yoga studio

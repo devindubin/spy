@@ -1,0 +1,126 @@
+#:kivy 2.3.0
+BoxLayout:
+    orientation: 'vertical'
+    InitializeScreen:
+    SettingsScreen:
+    PlayScreen:
+    MainMenuScreen:
+
+<ActivePlayScreen>:
+    BoxLayout:
+        orientation:'vertical'
+        Label:
+            id: countdown_timer
+            text: root.display_clock
+        Button:
+            text:"Vote Now"
+            on_press:
+                root.manager.current = 'vote'
+            
+<StartGameScreen>:
+    BoxLayout:
+        orientation:'vertical'
+        Label:
+            text: 'Start Game'
+        Button:
+            text:'Start Game'
+            on_release: 
+                root.manager.current = 'game'
+                
+
+
+
+<PlayerCard>:
+    id: 'player-card'
+
+    on_release: 
+        self.display()
+        
+<CustomPopup>:
+    on_dismiss:app.check_to_start_game()
+
+<InitializeScreen>:
+    id: 'menu-screen'
+    BoxLayout:
+        id: init_blayout_0
+        orientation: 'vertical'
+        BoxLayout:
+            id: blayout_1_1
+            Label:
+                id:player_count_label
+                text: str(root.player_count)
+                value: 3
+
+            Slider:
+                id: slide_val
+                min: 3
+                max: 8
+                value:3
+                on_touch_move:root.update_player_label(slide_val.value)
+                on_touch_down: root.update_player_label(slide_val.value)
+                on_touch_up: root.update_player_label(slide_val.value)
+                step: 1
+                
+        BoxLayout:
+            orientation:'vertical'
+            id: blayout_1_2
+            CheckBox:
+                id: randomize_word
+                on_active: root.on_checkbox_active(self.active)
+            # TextInput:
+            #     id: 'select-word-input'
+            #     disabled: not root.ids.randomize_word.active
+            
+            
+
+        BoxLayout:
+            id: blayout_1_3
+            Button:
+                text: 'Start Game'
+                on_press: 
+                    
+                    root.initialize_options(slide_val.value)
+                    root.manager.get_screen('game').initialize_timer(slide_val.value)
+                    
+                    
+
+            Button:
+                text: 'Back'
+                #TODO: change name of newmenu
+                on_press: root.manager.current = 'main-menu'
+            Button:
+                text: 'Quit'
+<SettingsScreen>:
+    
+    BoxLayout:
+        Button:
+            text: 'My settings button'
+        Button:
+            text: 'Back to menu'
+            on_press: root.manager.current = 'initialize-menu'
+
+<MainMenuScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Spy +'
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 10,10,10,10
+            Button:
+                text: 'New Game'
+                on_press: 
+                    root.manager.current = 'initialize-menu'
+                    root.manager.get_screen('initialize-menu').update_player_label(3)
+            Button:
+                text: 'Alt Modes'
+            Button:
+                text: 'Settings'
+            Button:
+                text: 'Quit'
+
+<VoteScreen>:
+    Button:
+        text:"Restart"
+        on_press:
+            root.manager.current = 'main-menu'
